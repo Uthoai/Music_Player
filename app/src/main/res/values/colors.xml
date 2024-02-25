@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="bg">#151515</color>
+    <color name="light_bluish_green200">#d3f1f0</color>
+    <color name="blue_green_300">#0AB6AB</color>
+    <color name="blue_green_400">#009299</color>
+    <color name="blue_green_600">#005360</color>
+    <color name="taskOnGoingText">#F5F5F5</color>
+    <color name="taskCompleteText">#7A7777</color>
+</resources>

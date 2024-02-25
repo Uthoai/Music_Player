@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/shuffle"
+        android:title="@string/shuffle"
+        android:icon="@drawable/ic_shuffle"/>
+    <item
+        android:id="@+id/favourites"
+        android:title="@string/favourites"
+        android:icon="@drawable/ic_heart"/>
+    <item
+        android:id="@+id/playlists"
+        android:title="@string/playlists"
+        android:icon="@drawable/ic_list_music"/>
+</menu>
