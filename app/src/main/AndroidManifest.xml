@@ -13,6 +13,12 @@
         android:theme="@style/Base.Theme.MusicPlayer"
         tools:targetApi="31">
         <activity
+            android:name=".view.PlaylistsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.FavouritesActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.PlayActivity"
             android:exported="false" />
         <activity

@@ -4,7 +4,187 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.PlayActivity"
-    android:background="@color/light_bluish_green200">
+    android:background="@color/light_bluish_green200"
+    tools:context=".view.PlayActivity">
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_16sdp"
+        android:src="@drawable/ic_arrow_back_ios_48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/btn_back" />
+
+    <TextView
+        android:id="@+id/textHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_16sdp"
+        android:fontFamily="@font/aldrich"
+        android:text="@string/world_of_music"
+        android:textColor="@color/blue_green_600"
+        android:textSize="@dimen/_22ssp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/btn_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btn_back" />
+
+    <ImageView
+        android:id="@+id/btn_heart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:src="@drawable/ic_heart_nf"
+        app:layout_constraintBottom_toBottomOf="@id/textHeader"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textHeader"
+        android:contentDescription="@string/btn_heart" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/musicImage"
+        android:layout_width="@dimen/_160sdp"
+        android:layout_height="@dimen/_160sdp"
+        android:scaleType="fitXY"
+        android:src="@drawable/music_jpeg"
+        app:layout_constraintBottom_toTopOf="@id/seekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textHeader"
+        app:shapeAppearanceOverlay="@style/circleImageView" />
+
+    <TextView
+        android:id="@+id/text_musicName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/music_name"
+        android:textSize="@dimen/_16ssp"
+        android:textStyle="bold"
+        android:textColor="@color/blue_green_400"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/musicImage"
+        android:layout_margin="@dimen/_24sdp"/>
+
+    <TextView
+        android:id="@+id/text_timeGo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:text="@string/time"
+        android:textColor="@color/blue_green_400"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintBottom_toTopOf="@id/btnPlay"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/text_totalTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:text="@string/time"
+        android:textColor="@color/blue_green_400"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintBottom_toTopOf="@id/btnPlay"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:padding="8dp"
+        android:progress="20"
+        android:progressTint="@color/blue_green_400"
+        android:progressBackgroundTint="@color/blue_green_400"
+        app:layout_constraintBottom_toBottomOf="@id/text_timeGo"
+        app:layout_constraintEnd_toStartOf="@id/text_totalTime"
+        app:layout_constraintStart_toEndOf="@id/text_timeGo"
+        app:layout_constraintTop_toTopOf="@id/text_timeGo" />
+
+    <ImageButton
+        android:id="@+id/btnPlay"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_play_circle"
+        app:layout_constraintBottom_toTopOf="@id/btn_repeat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/btn_Play" />
+
+    <ImageButton
+        android:id="@+id/btn_backward"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_rewind"
+        app:layout_constraintBottom_toBottomOf="@id/btnPlay"
+        app:layout_constraintEnd_toStartOf="@id/btnPlay"
+        app:layout_constraintTop_toTopOf="@id/btnPlay"
+        android:contentDescription="@string/btn_backward" />
+
+    <ImageButton
+        android:id="@+id/btn_forward"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_forward"
+        app:layout_constraintBottom_toBottomOf="@id/btnPlay"
+        app:layout_constraintStart_toEndOf="@id/btnPlay"
+        app:layout_constraintTop_toTopOf="@id/btnPlay"
+        android:contentDescription="@string/btn_forward" />
+
+    <ImageButton
+        android:id="@+id/btn_repeat"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_repeat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_equalizer"
+        android:layout_marginBottom="@dimen/_12sdp"
+        android:contentDescription="@string/btn_repeat" />
+
+    <ImageButton
+        android:id="@+id/btn_equalizer"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_equalizer"
+        app:layout_constraintBottom_toBottomOf="@id/btn_repeat"
+        app:layout_constraintStart_toEndOf="@id/btn_repeat"
+        app:layout_constraintTop_toTopOf="@id/btn_repeat"
+        app:layout_constraintEnd_toStartOf="@+id/btn_timer"
+        android:contentDescription="@string/btn_equalizer" />
+
+    <ImageButton
+        android:id="@+id/btn_timer"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_timer"
+        app:layout_constraintBottom_toBottomOf="@id/btn_repeat"
+        app:layout_constraintStart_toEndOf="@id/btn_equalizer"
+        app:layout_constraintTop_toTopOf="@id/btn_repeat"
+        app:layout_constraintEnd_toStartOf="@id/btn_share"
+        android:contentDescription="@string/btn_timer" />
+
+    <ImageButton
+        android:id="@+id/btn_share"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/share"
+        app:layout_constraintBottom_toBottomOf="@id/btn_repeat"
+        app:layout_constraintStart_toEndOf="@id/btn_timer"
+        app:layout_constraintTop_toTopOf="@id/btn_repeat"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/btn_share" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

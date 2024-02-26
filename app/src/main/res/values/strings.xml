@@ -4,4 +4,16 @@
     <string name="favourites">Favourites</string>
     <string name="playlists">Playlists</string>
     <string name="total_song">Total Song:</string>
+    <string name="time">00:00</string>
+    <string name="btn_backward">btn_backward</string>
+    <string name="btn_forward">btn_forward</string>
+    <string name="btn_repeat">btn_repeat</string>
+    <string name="btn_equalizer">btn_equalizer</string>
+    <string name="btn_Play">btnPlay</string>
+    <string name="btn_back">btn_back</string>
+    <string name="world_of_music">World of Music</string>
+    <string name="btn_heart">btn_heart</string>
+    <string name="btn_timer">btn_timer</string>
+    <string name="btn_share">btn_share</string>
+    <string name="music_name">Music Name</string>
 </resources>
