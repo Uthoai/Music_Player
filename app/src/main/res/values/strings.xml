@@ -16,4 +16,5 @@
     <string name="btn_timer">btn_timer</string>
     <string name="btn_share">btn_share</string>
     <string name="music_name">Music Name</string>
+    <string name="fab_addMusic">fab_addMusic</string>
 </resources>

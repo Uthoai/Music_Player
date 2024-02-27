@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/light_bluish_green200"
     tools:context=".view.MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -17,7 +16,9 @@
             android:id="@+id/toolbarLayout"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/blue_green_400" />
+            android:background="@color/blue_green_400">
+
+        </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -31,7 +32,7 @@
         android:textColor="@color/blue_green_600"
         app:layout_constraintEnd_toStartOf="@id/btn_favourites"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/appbarLayout" />
+        app:layout_constraintBottom_toBottomOf="parent" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_favourites"
@@ -43,7 +44,7 @@
         android:textColor="@color/blue_green_600"
         app:layout_constraintEnd_toStartOf="@id/btn_playlists"
         app:layout_constraintStart_toEndOf="@id/btn_shuffle"
-        app:layout_constraintTop_toBottomOf="@id/appbarLayout" />
+        app:layout_constraintBottom_toBottomOf="parent" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_playlists"
@@ -55,7 +56,7 @@
         android:textColor="@color/blue_green_600"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/btn_favourites"
-        app:layout_constraintTop_toBottomOf="@id/appbarLayout" />
+        app:layout_constraintBottom_toBottomOf="parent" />
 
     <TextView
         android:id="@+id/text_totalSong"
